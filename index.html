@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="refresh" content="0; url=./public/showcase/index.html" />
+    <meta name="description" content="SHAHEEN VIP — Premium cinematic showcase by SHAHEEN GROUP." />
+    <title>SHAHEEN VIP</title>
+    <style>
+      :root {
+        --bg: #121212;
+        --panel: #191919;
+        --line: rgba(255,255,255,0.12);
+        --text: #ffffff;
+        --muted: #a6a6a6;
+      }
+      * { box-sizing: border-box; }
+      html, body {
+        margin: 0;
+        min-height: 100%;
+        background: var(--bg);
+        color: var(--text);
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      body {
+        display: grid;
+        place-items: center;
+        min-height: 100vh;
+        padding: 24px;
+        background:
+          radial-gradient(circle at top, rgba(255,255,255,0.06), transparent 40%),
+          #121212;
+      }
+      .card {
+        width: min(560px, 100%);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        background: var(--panel);
+        padding: 32px 28px;
+        text-align: center;
+        box-shadow: 0 18px 50px rgba(0,0,0,0.35);
+      }
+      .eyebrow {
+        font-size: 11px;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+      h1 {
+        margin: 16px 0 10px;
+        font-size: clamp(2rem, 5vw, 3.5rem);
+        line-height: 1.1;
+        letter-spacing: -0.06em;
+      }
+      p {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.7;
+      }
+      a {
+        display: inline-block;
+        margin-top: 22px;
+        padding: 12px 18px;
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        background: rgba(255,255,255,0.03);
+        color: var(--text);
+        text-decoration: none;
+        font-weight: 700;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="card" aria-live="polite">
+      <div class="eyebrow">SHAHEEN GROUP</div>
+      <h1>SHAHEEN VIP</h1>
+      <p>Redirecting to the premium cinematic showcase...</p>
+      <a href="./public/showcase/index.html">Open SHAHEEN VIP Showcase</a>
+    </main>
+  </body>
+</html>
