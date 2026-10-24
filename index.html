@@ -3,16 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="refresh" content="0; url=./public/showcase/index.html" />
-    <meta name="description" content="SHAHEEN VIP — Premium cinematic showcase by SHAHEEN GROUP." />
+    <meta name="description" content="SHAHEEN VIP — public showcase and navigation." />
     <title>SHAHEEN VIP</title>
     <style>
       :root {
         --bg: #121212;
         --panel: #191919;
-        --line: rgba(255,255,255,0.12);
+        --line: rgba(255, 255, 255, 0.12);
         --text: #ffffff;
         --muted: #a6a6a6;
+        --accent: #d9d9d9;
       }
       * { box-sizing: border-box; }
       html, body {
@@ -27,18 +27,16 @@
         place-items: center;
         min-height: 100vh;
         padding: 24px;
-        background:
-          radial-gradient(circle at top, rgba(255,255,255,0.06), transparent 40%),
-          #121212;
+        background: radial-gradient(circle at top, rgba(255,255,255,0.06), transparent 40%), #121212;
       }
       .card {
-        width: min(560px, 100%);
+        width: min(600px, 100%);
         border: 1px solid var(--line);
         border-radius: 18px;
         background: var(--panel);
         padding: 32px 28px;
         text-align: center;
-        box-shadow: 0 18px 50px rgba(0,0,0,0.35);
+        box-shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
       }
       .eyebrow {
         font-size: 11px;
@@ -57,9 +55,18 @@
         color: var(--muted);
         line-height: 1.7;
       }
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        justify-content: center;
+        margin-top: 20px;
+      }
       a {
-        display: inline-block;
-        margin-top: 22px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 48px;
         padding: 12px 18px;
         border: 1px solid var(--line);
         border-radius: 10px;
@@ -67,19 +74,49 @@
         color: var(--text);
         text-decoration: none;
         font-weight: 700;
+        transition: transform 0.2s ease, border-color 0.2s ease;
       }
-      .main-link {
-        margin-top: 14px;
+      a:hover {
+        transform: translateY(-1px);
+        border-color: rgba(255,255,255,0.3);
+      }
+      .primary {
+        background: var(--accent);
+        color: #121212;
+      }
+      .secondary {
+        background: rgba(255,255,255,0.02);
       }
     </style>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const primaryUrl = 'https://shaheen-bilingual-command-hub.lovable.app/';
+        const altUrl = 'https://shaheen-gp.pages.dev/';
+
+        const primaryLink = document.querySelector('[data-primary-link]');
+        const altLink = document.querySelector('[data-alt-link]');
+
+        if (primaryLink) {
+          primaryLink.href = primaryUrl;
+          primaryLink.setAttribute('target', '_self');
+        }
+
+        if (altLink) {
+          altLink.href = altUrl;
+          altLink.setAttribute('target', '_self');
+        }
+      });
+    </script>
   </head>
   <body>
     <main class="card" aria-live="polite">
       <div class="eyebrow">SHAHEEN GROUP</div>
       <h1>SHAHEEN VIP</h1>
-      <p>Redirecting to the premium cinematic showcase...</p>
-      <a href="./public/showcase/index.html">Open SHAHEEN VIP Showcase</a>
-      <a class="main-link" href="https://shaheen-bilingual-command-hub.lovable.app/" target="_self">استكشف الموقع الرئيسي</a>
+      <p>زيارة الموقع الرسمي أو استخدام الرابط البديل.</p>
+      <div class="actions">
+        <a class="primary" href="https://shaheen-bilingual-command-hub.lovable.app/" data-primary-link target="_self">استكشف الموقع الرئيسي</a>
+        <a class="secondary" href="https://shaheen-gp.pages.dev/" data-alt-link target="_self">فتح الموقع عبر الرابط البديل</a>
+      </div>
     </main>
   </body>
 </html>
