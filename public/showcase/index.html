@@ -1,0 +1,2406 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta
+    name="theme-color"
+    content="#090a0c"
+  >
+
+  <meta
+    name="description"
+    content="SHAHEEN GROUP — Beyond Innovation. Beyond Limits. Independent developer showcase by Yousef Shaheen."
+  >
+
+  <meta
+    name="author"
+    content="Yousef Shaheen"
+  >
+
+  <meta
+    property="og:title"
+    content="SHAHEEN GROUP — Beyond Innovation. Beyond Limits."
+  >
+
+  <meta
+    property="og:description"
+    content="Explore the digital identity, projects, and contact channels of SHAHEEN GROUP."
+  >
+
+  <meta
+    property="og:image"
+    content="https://i.postimg.cc/W18FRpwC/y-shaheen.jpg"
+  >
+
+  <meta
+    property="og:type"
+    content="website"
+  >
+
+  <title>SHAHEEN GROUP — Beyond Innovation. Beyond Limits.</title>
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Cairo:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+    /* =====================================================
+       SHAHEEN GROUP — PREMIUM MONOCHROME SHOWCASE
+       Standalone HTML / CSS / JavaScript
+       ===================================================== */
+
+    :root {
+      color-scheme: dark;
+
+      --bg: #090a0c;
+      --bg-soft: #0e1013;
+      --panel: #111317;
+      --panel-light: #171a1f;
+
+      --white: #f5f6f7;
+      --silver: #c6cbd2;
+      --muted: #858c97;
+      --dim: #5c636e;
+
+      --line: rgba(255, 255, 255, 0.09);
+      --line-strong: rgba(255, 255, 255, 0.17);
+
+      --radius: 22px;
+      --radius-small: 14px;
+
+      --container: 1160px;
+
+      --font-en: "Inter", Arial, sans-serif;
+      --font-ar: "Cairo", Tahoma, Arial, sans-serif;
+
+      --transition: 220ms ease;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      min-width: 320px;
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
+      background: var(--bg);
+    }
+
+    body {
+      margin: 0;
+      min-width: 320px;
+      overflow-x: hidden;
+      background:
+        radial-gradient(
+          ellipse at 50% -15%,
+          rgba(255, 255, 255, 0.065),
+          transparent 47%
+        ),
+        var(--bg);
+      color: var(--white);
+      font-family: var(--font-en);
+      font-size: 15px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    html[lang="ar"] body {
+      font-family: var(--font-ar);
+    }
+
+    body::before {
+      position: fixed;
+      z-index: -1;
+      inset: 0;
+      pointer-events: none;
+      content: "";
+      opacity: 0.13;
+      background-image:
+        linear-gradient(
+          rgba(255, 255, 255, 0.025) 1px,
+          transparent 1px
+        ),
+        linear-gradient(
+          90deg,
+          rgba(255, 255, 255, 0.025) 1px,
+          transparent 1px
+        );
+      background-size: 52px 52px;
+      mask-image: linear-gradient(
+        to bottom,
+        black,
+        transparent 82%
+      );
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      color: inherit;
+      font: inherit;
+    }
+
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    button:focus-visible,
+    a:focus-visible {
+      outline: 2px solid var(--white);
+      outline-offset: 4px;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    ::selection {
+      background: #f5f6f7;
+      color: #090a0c;
+    }
+
+    .container {
+      width: min(
+        calc(100% - 40px),
+        var(--container)
+      );
+      margin-inline: auto;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .silver {
+      color: var(--silver);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--silver);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    html[lang="ar"] .eyebrow {
+      letter-spacing: 0;
+    }
+
+    .eyebrow::before {
+      width: 23px;
+      height: 1px;
+      background: var(--silver);
+      content: "";
+    }
+
+    .section {
+      padding-block: 100px;
+    }
+
+    .section-heading {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 38px;
+    }
+
+    .section-heading h2 {
+      margin: 12px 0 0;
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.055em;
+    }
+
+    html[lang="ar"] .section-heading h2 {
+      letter-spacing: 0;
+      line-height: 1.5;
+    }
+
+    .section-heading p {
+      max-width: 430px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* Header */
+
+    .header {
+      position: sticky;
+      z-index: 20;
+      top: 0;
+      border-bottom: 1px solid var(--line);
+      background: rgba(9, 10, 12, 0.83);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+    }
+
+    .header-inner {
+      display: flex;
+      min-height: 76px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: inline-flex;
+      min-width: 0;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-mark {
+      display: grid;
+      width: 40px;
+      height: 40px;
+      flex: 0 0 40px;
+      place-items: center;
+      border: 1px solid var(--line-strong);
+      border-radius: 12px;
+      background:
+        linear-gradient(
+          145deg,
+          #292d33,
+          #0d0f12 75%
+        );
+      color: var(--white);
+      font-size: 19px;
+      font-weight: 900;
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.12),
+        0 8px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    .brand-copy {
+      display: flex;
+      min-width: 0;
+      flex-direction: column;
+      line-height: 1.2;
+    }
+
+    .brand-name {
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.16em;
+      white-space: nowrap;
+    }
+
+    .brand-subtitle {
+      margin-top: 5px;
+      color: var(--muted);
+      font-size: 9px;
+      letter-spacing: 0.13em;
+      white-space: nowrap;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .nav a {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 600;
+      transition: color var(--transition);
+    }
+
+    .nav a:hover {
+      color: var(--white);
+    }
+
+    .language-button {
+      display: inline-flex;
+      min-height: 40px;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 0 13px;
+      border: 1px solid var(--line-strong);
+      border-radius: 11px;
+      background: rgba(255, 255, 255, 0.035);
+      color: var(--white);
+      cursor: pointer;
+      transition:
+        background var(--transition),
+        border-color var(--transition);
+    }
+
+    .language-button:hover {
+      border-color: rgba(255, 255, 255, 0.4);
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .language-button span {
+      font-size: 11px;
+      font-weight: 800;
+    }
+
+    /* Hero */
+
+    .hero {
+      position: relative;
+      padding-block: 105px 78px;
+    }
+
+    .hero::before {
+      position: absolute;
+      z-index: -1;
+      top: 30px;
+      left: 50%;
+      width: min(850px, 100%);
+      height: 450px;
+      transform: translateX(-50%);
+      border-radius: 50%;
+      background: radial-gradient(
+        ellipse,
+        rgba(255, 255, 255, 0.055),
+        transparent 68%
+      );
+      content: "";
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.35fr) minmax(260px, 0.65fr);
+      align-items: center;
+      gap: 65px;
+    }
+
+    .hero-copy {
+      min-width: 0;
+    }
+
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 7px 11px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.025);
+      color: var(--silver);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+    }
+
+    .status-dot {
+      width: 7px;
+      height: 7px;
+      flex: 0 0 7px;
+      border-radius: 50%;
+      background: #c6cbd2;
+      box-shadow: 0 0 12px rgba(255, 255, 255, 0.25);
+    }
+
+    .hero h1 {
+      margin: 25px 0 0;
+      font-size: clamp(43px, 7vw, 82px);
+      font-weight: 900;
+      line-height: 0.99;
+      letter-spacing: -0.075em;
+    }
+
+    .hero h1 .line {
+      display: block;
+    }
+
+    .hero h1 .outline {
+      color: transparent;
+      -webkit-text-stroke: 1px rgba(245, 246, 247, 0.58);
+    }
+
+    html[lang="ar"] .hero h1 {
+      line-height: 1.3;
+      letter-spacing: 0;
+    }
+
+    .hero-description {
+      max-width: 590px;
+      margin: 25px 0 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.95;
+    }
+
+    .hero-description strong {
+      color: var(--silver);
+      font-weight: 600;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .button {
+      display: inline-flex;
+      min-height: 48px;
+      align-items: center;
+      justify-content: center;
+      gap: 11px;
+      padding: 0 20px;
+      border: 1px solid transparent;
+      border-radius: 12px;
+      font-size: 12px;
+      font-weight: 800;
+      transition:
+        transform var(--transition),
+        background var(--transition),
+        border-color var(--transition);
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    .button-primary {
+      background: var(--white);
+      color: #090a0c;
+    }
+
+    .button-primary:hover {
+      background: #dfe2e6;
+    }
+
+    .button-secondary {
+      border-color: var(--line-strong);
+      background: rgba(255, 255, 255, 0.025);
+      color: var(--white);
+    }
+
+    .button-secondary:hover {
+      background: rgba(255, 255, 255, 0.075);
+    }
+
+    .button-arrow {
+      font-size: 16px;
+    }
+
+    .hero-footnote {
+      margin-top: 20px;
+      color: var(--dim);
+      font-size: 11px;
+    }
+
+    /* Profile card */
+
+    .profile-wrap {
+      position: relative;
+      width: 100%;
+      max-width: 365px;
+      justify-self: end;
+    }
+
+    .profile-glow {
+      position: absolute;
+      inset: 10% -5%;
+      z-index: -1;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.075);
+      filter: blur(60px);
+      pointer-events: none;
+    }
+
+    .profile-card {
+      overflow: hidden;
+      border: 1px solid var(--line-strong);
+      border-radius: 25px;
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255, 255, 255, 0.07),
+          transparent 42%
+        ),
+        var(--panel);
+      box-shadow:
+        0 30px 90px rgba(0, 0, 0, 0.35),
+        inset 0 1px 0 rgba(255, 255, 255, 0.06);
+    }
+
+    .profile-image-wrap {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 4 / 4.3;
+      background: #17191d;
+    }
+
+    .profile-image-wrap::after {
+      position: absolute;
+      inset: 35% 0 0;
+      background: linear-gradient(
+        to bottom,
+        transparent,
+        rgba(9, 10, 12, 0.86)
+      );
+      content: "";
+      pointer-events: none;
+    }
+
+    .profile-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      filter: grayscale(100%);
+      transition:
+        transform 600ms ease,
+        filter 600ms ease;
+    }
+
+    .profile-card:hover .profile-image {
+      transform: scale(1.035);
+      filter: grayscale(70%);
+    }
+
+    .profile-image-fallback {
+      display: none;
+      width: 100%;
+      height: 100%;
+      align-items: center;
+      justify-content: center;
+      background:
+        radial-gradient(
+          circle at 50% 35%,
+          #343940,
+          #14161a 66%
+        );
+      color: var(--white);
+      font-size: 75px;
+      font-weight: 900;
+      letter-spacing: -0.08em;
+    }
+
+    .profile-overlay {
+      position: absolute;
+      z-index: 1;
+      right: 20px;
+      bottom: 19px;
+      left: 20px;
+    }
+
+    .profile-label {
+      display: inline-block;
+      padding: 5px 9px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 7px;
+      background: rgba(9, 10, 12, 0.65);
+      color: var(--silver);
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+    }
+
+    .profile-name {
+      margin: 12px 0 3px;
+      font-size: 23px;
+      font-weight: 800;
+      letter-spacing: -0.045em;
+    }
+
+    html[lang="ar"] .profile-name {
+      letter-spacing: 0;
+    }
+
+    .profile-role {
+      color: #c5cad1;
+      font-size: 11px;
+    }
+
+    .profile-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 16px 19px;
+      border-top: 1px solid var(--line);
+    }
+
+    .profile-location {
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    .profile-code {
+      color: var(--silver);
+      font-family: monospace;
+      font-size: 10px;
+    }
+
+    /* Ticker */
+
+    .ticker-section {
+      overflow: hidden;
+      border-block: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.018);
+    }
+
+    .ticker {
+      display: flex;
+      width: max-content;
+      min-height: 65px;
+      align-items: center;
+      animation: ticker-move 32s linear infinite;
+    }
+
+    .ticker-track {
+      display: flex;
+      align-items: center;
+      gap: 35px;
+      padding-inline-end: 35px;
+    }
+
+    .ticker-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--silver);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.15em;
+      white-space: nowrap;
+    }
+
+    .ticker-star {
+      color: #f5f6f7;
+      font-size: 15px;
+    }
+
+    @keyframes ticker-move {
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
+    /* Shared cards */
+
+    .card {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255, 255, 255, 0.035),
+          transparent 60%
+        ),
+        var(--panel);
+      transition:
+        transform var(--transition),
+        border-color var(--transition),
+        background var(--transition);
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: var(--line-strong);
+      background-color: var(--panel-light);
+    }
+
+    .card-icon {
+      display: grid;
+      width: 45px;
+      height: 45px;
+      place-items: center;
+      border: 1px solid var(--line);
+      border-radius: 13px;
+      background: rgba(255, 255, 255, 0.035);
+      color: var(--white);
+      font-size: 17px;
+      font-weight: 900;
+    }
+
+    .card h3 {
+      margin: 22px 0 9px;
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: -0.035em;
+    }
+
+    html[lang="ar"] .card h3 {
+      letter-spacing: 0;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.9;
+    }
+
+    /* About */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .about-card {
+      min-height: 225px;
+      padding: 25px;
+    }
+
+    .card-index {
+      color: var(--dim);
+      font-family: monospace;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+    }
+
+    /* Vision */
+
+    .vision-panel {
+      position: relative;
+      overflow: hidden;
+      padding: 48px;
+      border: 1px solid var(--line-strong);
+      border-radius: 26px;
+      background:
+        radial-gradient(
+          ellipse at 95% 0%,
+          rgba(255, 255, 255, 0.07),
+          transparent 40%
+        ),
+        linear-gradient(
+          145deg,
+          #171a1f,
+          #0e1013 72%
+        );
+    }
+
+    .vision-panel::after {
+      position: absolute;
+      right: -65px;
+      bottom: -150px;
+      width: 310px;
+      height: 310px;
+      border: 1px solid rgba(255, 255, 255, 0.055);
+      border-radius: 50%;
+      box-shadow:
+        0 0 0 28px rgba(255, 255, 255, 0.018),
+        0 0 0 58px rgba(255, 255, 255, 0.013);
+      content: "";
+      pointer-events: none;
+    }
+
+    .vision-panel h2 {
+      position: relative;
+      z-index: 1;
+      max-width: 780px;
+      margin: 20px 0;
+      font-size: clamp(30px, 5vw, 57px);
+      font-weight: 900;
+      line-height: 1.15;
+      letter-spacing: -0.06em;
+    }
+
+    html[lang="ar"] .vision-panel h2 {
+      line-height: 1.5;
+      letter-spacing: 0;
+    }
+
+    .vision-panel p {
+      position: relative;
+      z-index: 1;
+      max-width: 650px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 2;
+    }
+
+    .vision-signature {
+      display: inline-block;
+      margin-top: 28px;
+      color: var(--silver);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.13em;
+    }
+
+    html[lang="ar"] .vision-signature {
+      letter-spacing: 0;
+    }
+
+    /* Social links */
+
+    .social-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .social-card {
+      display: flex;
+      min-width: 0;
+      min-height: 83px;
+      align-items: center;
+      gap: 13px;
+      padding: 15px;
+      border: 1px solid var(--line);
+      border-radius: 15px;
+      background: rgba(255, 255, 255, 0.018);
+      transition:
+        transform var(--transition),
+        border-color var(--transition),
+        background var(--transition);
+    }
+
+    .social-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--line-strong);
+      background: rgba(255, 255, 255, 0.055);
+    }
+
+    .social-icon {
+      display: grid;
+      width: 39px;
+      height: 39px;
+      flex: 0 0 39px;
+      place-items: center;
+      border: 1px solid var(--line);
+      border-radius: 11px;
+      background: var(--panel-light);
+      color: var(--white);
+      font-size: 11px;
+      font-weight: 900;
+    }
+
+    .social-copy {
+      display: flex;
+      min-width: 0;
+      flex-direction: column;
+      line-height: 1.4;
+    }
+
+    .social-name {
+      overflow: hidden;
+      color: var(--white);
+      font-size: 12px;
+      font-weight: 800;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .social-action {
+      margin-top: 5px;
+      color: var(--muted);
+      font-size: 10px;
+    }
+
+    /* Contact */
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+      gap: 18px;
+    }
+
+    .contact-intro {
+      padding: 34px;
+    }
+
+    .contact-intro h3 {
+      margin: 20px 0 12px;
+      font-size: 28px;
+      font-weight: 900;
+      line-height: 1.2;
+      letter-spacing: -0.05em;
+    }
+
+    html[lang="ar"] .contact-intro h3 {
+      letter-spacing: 0;
+      line-height: 1.5;
+    }
+
+    .contact-intro p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 2;
+    }
+
+    .contact-details {
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+      padding: 22px;
+    }
+
+    .contact-row {
+      display: flex;
+      min-width: 0;
+      align-items: center;
+      gap: 14px;
+      padding: 15px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.018);
+      transition: border-color var(--transition);
+    }
+
+    .contact-row:hover {
+      border-color: var(--line-strong);
+    }
+
+    .contact-symbol {
+      display: grid;
+      width: 41px;
+      height: 41px;
+      flex: 0 0 41px;
+      place-items: center;
+      border: 1px solid var(--line);
+      border-radius: 11px;
+      background: var(--panel-light);
+      color: var(--silver);
+      font-size: 15px;
+      font-weight: 800;
+    }
+
+    .contact-copy {
+      display: flex;
+      min-width: 0;
+      flex: 1;
+      flex-direction: column;
+    }
+
+    .contact-label {
+      color: var(--muted);
+      font-size: 10px;
+    }
+
+    .contact-value {
+      overflow-wrap: anywhere;
+      color: var(--white);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .contact-arrow {
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    /* Footer */
+
+    .footer {
+      margin-top: 25px;
+      border-top: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.012);
+    }
+
+    .footer-main {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+      padding-block: 28px;
+    }
+
+    .footer-brand {
+      color: var(--white);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 0.15em;
+    }
+
+    .footer-tagline {
+      margin-top: 5px;
+      color: var(--muted);
+      font-size: 10px;
+    }
+
+    .footer-meta {
+      color: var(--muted);
+      font-size: 10px;
+      text-align: end;
+    }
+
+    .footer-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding-block: 15px;
+      border-top: 1px solid var(--line);
+      color: var(--dim);
+      font-size: 10px;
+    }
+
+    /* Reveal animations */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition:
+        opacity 650ms ease,
+        transform 650ms ease;
+    }
+
+    .reveal.in {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* RTL support */
+
+    html[dir="rtl"] .eyebrow::before {
+      order: 2;
+    }
+
+    html[dir="rtl"] .profile-overlay {
+      text-align: right;
+    }
+
+    html[dir="rtl"] .footer-meta {
+      text-align: start;
+    }
+
+    /* Responsive */
+
+    @media (max-width: 980px) {
+      .nav {
+        gap: 14px;
+      }
+
+      .hero-grid {
+        grid-template-columns: minmax(0, 1fr) minmax(230px, 0.75fr);
+        gap: 35px;
+      }
+
+      .hero h1 {
+        font-size: clamp(42px, 6.5vw, 67px);
+      }
+
+      .social-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 760px) {
+      .container {
+        width: min(
+          calc(100% - 30px),
+          var(--container)
+        );
+      }
+
+      .header-inner {
+        min-height: 68px;
+      }
+
+      .nav {
+        display: none;
+      }
+
+      .hero {
+        padding-block: 70px 55px;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 42px;
+      }
+
+      .hero h1 {
+        font-size: clamp(43px, 11vw, 70px);
+      }
+
+      .hero-description {
+        font-size: 13px;
+      }
+
+      .profile-wrap {
+        width: min(100%, 390px);
+        justify-self: center;
+      }
+
+      .section {
+        padding-block: 70px;
+      }
+
+      .section-heading {
+        align-items: start;
+        flex-direction: column;
+        gap: 12px;
+        margin-bottom: 27px;
+      }
+
+      .section-heading p {
+        max-width: 550px;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-card {
+        min-height: 0;
+      }
+
+      .vision-panel {
+        padding: 30px 24px;
+      }
+
+      .social-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-main {
+        align-items: start;
+        flex-direction: column;
+      }
+
+      .footer-meta {
+        text-align: start;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .brand-mark {
+        width: 35px;
+        height: 35px;
+        flex-basis: 35px;
+      }
+
+      .brand-name {
+        font-size: 11px;
+        letter-spacing: 0.1em;
+      }
+
+      .brand-subtitle {
+        font-size: 8px;
+        letter-spacing: 0.06em;
+      }
+
+      .header-actions {
+        gap: 0;
+      }
+
+      .language-button {
+        min-height: 36px;
+        padding-inline: 10px;
+      }
+
+      .hero h1 {
+        font-size: 42px;
+      }
+
+      .hero-actions {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .button {
+        width: 100%;
+      }
+
+      .social-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .social-card {
+        min-height: 72px;
+      }
+
+      .contact-intro {
+        padding: 25px;
+      }
+
+      .contact-details {
+        padding: 14px;
+      }
+
+      .footer-bottom {
+        align-items: start;
+        flex-direction: column;
+        gap: 7px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ===================================================
+       HEADER
+       =================================================== -->
+
+  <header class="header">
+    <div class="container header-inner">
+
+      <a
+        class="brand"
+        href="/"
+        aria-label="SHAHEEN GROUP home"
+      >
+        <span class="brand-mark" aria-hidden="true">S</span>
+
+        <span class="brand-copy">
+          <span class="brand-name">SHAHEEN GROUP</span>
+          <span
+            class="brand-subtitle"
+            data-i18n="brandSubtitle"
+          >BEYOND INNOVATION. BEYOND LIMITS.</span>
+        </span>
+      </a>
+
+      <div class="header-actions">
+
+        <nav class="nav" aria-label="Main navigation">
+          <a href="#about" data-i18n="navAbout">About</a>
+          <a href="#vision" data-i18n="navVision">Vision</a>
+          <a href="#social" data-i18n="navSocial">Social</a>
+          <a href="#contact" data-i18n="navContact">Contact</a>
+        </nav>
+
+        <button
+          class="language-button"
+          id="languageToggle"
+          type="button"
+          aria-label="Switch language"
+          aria-pressed="false"
+        >
+          <span aria-hidden="true">文</span>
+          <span id="languageLabel">العربية</span>
+        </button>
+
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- =================================================
+         HERO
+         ================================================= -->
+
+    <section class="hero">
+      <div class="container hero-grid">
+
+        <div class="hero-copy reveal">
+
+          <div class="status-badge">
+            <span class="status-dot" aria-hidden="true"></span>
+            <span data-i18n="status">INDEPENDENT DIGITAL IDENTITY</span>
+          </div>
+
+          <h1>
+            <span
+              class="line"
+              data-i18n="heroTitle1"
+            >BEYOND</span>
+
+            <span
+              class="line outline"
+              data-i18n="heroTitle2"
+            >INNOVATION.</span>
+
+            <span
+              class="line"
+              data-i18n="heroTitle3"
+            >BEYOND LIMITS.</span>
+          </h1>
+
+          <p
+            class="hero-description"
+            data-i18n="heroDescription"
+          >
+            Welcome to SHAHEEN GROUP — a digital identity built around
+            technology, creativity, and ambitious ideas.
+          </p>
+
+          <div class="hero-actions">
+
+            <a
+              class="button button-primary"
+              href="/"
+            >
+              <span data-i18n="primaryAction">Explore Main Website</span>
+              <span class="button-arrow" aria-hidden="true">↗</span>
+            </a>
+
+            <a
+              class="button button-secondary"
+              href="#contact"
+            >
+              <span data-i18n="secondaryAction">Get in Touch</span>
+              <span class="button-arrow" aria-hidden="true">↘</span>
+            </a>
+
+          </div>
+
+          <p
+            class="hero-footnote"
+            data-i18n="heroFootnote"
+          >
+            Independent showcase · Official links and contact channels
+          </p>
+
+        </div>
+
+        <div class="profile-wrap reveal">
+
+          <div class="profile-glow" aria-hidden="true"></div>
+
+          <article class="profile-card">
+
+            <div class="profile-image-wrap">
+
+              <img
+                class="profile-image"
+                id="profileImage"
+                src="https://i.postimg.cc/W18FRpwC/y-shaheen.jpg"
+                alt="Yousef Shaheen profile"
+                loading="eager"
+                fetchpriority="high"
+                referrerpolicy="no-referrer"
+                width="600"
+                height="645"
+              >
+
+              <div
+                class="profile-image-fallback"
+                id="profileFallback"
+                aria-hidden="true"
+              >
+                YS
+              </div>
+
+              <div class="profile-overlay">
+
+                <span
+                  class="profile-label"
+                  data-i18n="profileLabel"
+                >FOUNDER / DIGITAL CREATOR</span>
+
+                <h2 class="profile-name">Yousef Shaheen</h2>
+
+                <div
+                  class="profile-role"
+                  data-i18n="profileRole"
+                >
+                  Technology · Development · Innovation
+                </div>
+
+              </div>
+
+            </div>
+
+            <div class="profile-bottom">
+
+              <span
+                class="profile-location"
+                data-i18n="location"
+              >Amman, Jordan</span>
+
+              <span class="profile-code">YS / 01</span>
+
+            </div>
+
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =================================================
+         BRAND TICKER
+         ================================================= -->
+
+    <section
+      class="ticker-section"
+      aria-label="Brand keywords"
+    >
+      <div class="ticker" id="ticker">
+
+        <div class="ticker-track">
+
+          <span class="ticker-item">
+            <span class="ticker-star">✳</span>
+            <span data-i18n="ticker1">DIGITAL INNOVATION</span>
+          </span>
+
+          <span class="ticker-item">
+            <span class="ticker-star">✳</span>
+            <span data-i18n="ticker2">INDEPENDENT THINKING</span>
+          </span>
+
+          <span class="ticker-item">
+            <span class="ticker-star">✳</span>
+            <span data-i18n="ticker3">TECHNOLOGY & DEVELOPMENT</span>
+          </span>
+
+          <span class="ticker-item">
+            <span class="ticker-star">✳</span>
+            <span data-i18n="ticker4">BEYOND LIMITS</span>
+          </span>
+
+          <span class="ticker-item">
+            <span class="ticker-star">✳</span>
+            <span data-i18n="ticker5">SHAHEEN GROUP</span>
+          </span>
+
+        </div>
+
+        <div
+          class="ticker-track"
+          aria-hidden="true"
+        >
+
+          <span class="ticker-item">
+            <span class="ticker-star">✳</span>
+            <span data-i18n="ticker1">DIGITAL INNOVATION</span>
+          </span>
+
+          <span class="ticker-item">
+            <span class="ticker-star">✳</span>
+            <span data-i18n="ticker2">INDEPENDENT THINKING</span>
+          </span>
+
+          <span class="ticker-item">
+            <span class="ticker-star">✳</span>
+            <span data-i18n="ticker3">TECHNOLOGY & DEVELOPMENT</span>
+          </span>
+
+          <span class="ticker-item">
+            <span class="ticker-star">✳</span>
+            <span data-i18n="ticker4">BEYOND LIMITS</span>
+          </span>
+
+          <span class="ticker-item">
+            <span class="ticker-star">✳</span>
+            <span data-i18n="ticker5">SHAHEEN GROUP</span>
+          </span>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================
+         ABOUT
+         ================================================= -->
+
+    <section class="section" id="about">
+      <div class="container">
+
+        <div class="section-heading reveal">
+
+          <div>
+            <span
+              class="eyebrow"
+              data-i18n="aboutEyebrow"
+            >THE FOUNDATION</span>
+
+            <h2 data-i18n="aboutTitle">Built on a Different Mindset.</h2>
+          </div>
+
+          <p data-i18n="aboutDescription">
+            A personal digital showcase for ideas, technology,
+            creative work, and future ambitions.
+          </p>
+
+        </div>
+
+        <div class="about-grid">
+
+          <article class="card about-card reveal">
+
+            <div class="card-index">01 / IDENTITY</div>
+
+            <div
+              class="card-icon"
+              aria-hidden="true"
+            >S.</div>
+
+            <h3 data-i18n="aboutCard1Title">Digital Identity</h3>
+
+            <p data-i18n="aboutCard1Description">
+              A unified digital presence that brings the SHAHEEN GROUP
+              identity, communication channels, and creative direction
+              together in one place.
+            </p>
+
+          </article>
+
+          <article class="card about-card reveal">
+
+            <div class="card-index">02 / TECHNOLOGY</div>
+
+            <div
+              class="card-icon"
+              aria-hidden="true"
+            >&lt;/&gt;</div>
+
+            <h3 data-i18n="aboutCard2Title">Technology & Development</h3>
+
+            <p data-i18n="aboutCard2Description">
+              Exploring software, web experiences, automation,
+              Linux environments, and practical digital tools.
+            </p>
+
+          </article>
+
+          <article class="card about-card reveal">
+
+            <div class="card-index">03 / DIRECTION</div>
+
+            <div
+              class="card-icon"
+              aria-hidden="true"
+            >↗</div>
+
+            <h3 data-i18n="aboutCard3Title">Forward Thinking</h3>
+
+            <p data-i18n="aboutCard3Description">
+              Turning ambitious concepts into organized projects
+              through continuous learning, experimentation,
+              and deliberate execution.
+            </p>
+
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================
+         VISION
+         ================================================= -->
+
+    <section class="section" id="vision">
+      <div class="container">
+
+        <article class="vision-panel reveal">
+
+          <span
+            class="eyebrow"
+            data-i18n="visionEyebrow"
+          >THE PHILOSOPHY</span>
+
+          <h2 data-i18n="visionTitle">
+            We don't just build projects — we command the digital future.
+          </h2>
+
+          <p data-i18n="visionDescription">
+            Every meaningful project starts with a clear idea.
+            SHAHEEN GROUP represents the pursuit of better digital
+            experiences, thoughtful engineering, and creative freedom.
+            The goal is not simply to follow technology, but to
+            understand it, build with it, and keep moving forward.
+          </p>
+
+          <span
+            class="vision-signature"
+            data-i18n="visionSignature"
+          >BEYOND INNOVATION. BEYOND LIMITS.</span>
+
+        </article>
+
+      </div>
+    </section>
+
+    <!-- =================================================
+         SOCIAL NETWORKS
+         ================================================= -->
+
+    <section class="section" id="social">
+      <div class="container">
+
+        <div class="section-heading reveal">
+
+          <div>
+            <span
+              class="eyebrow"
+              data-i18n="socialEyebrow"
+            >CONNECT</span>
+
+            <h2 data-i18n="socialTitle">Find Me Across the Web.</h2>
+          </div>
+
+          <p data-i18n="socialDescription">
+            Choose a platform below to open its associated profile
+            or communication channel.
+          </p>
+
+        </div>
+
+        <div class="social-grid">
+
+          <a
+            class="social-card reveal"
+            href="https://www.facebook.com/share/19u4QUKFTL/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Open Facebook profile"
+          >
+            <span class="social-icon" aria-hidden="true">f</span>
+            <span class="social-copy">
+              <span class="social-name">Facebook</span>
+              <span class="social-action" data-i18n="socialOpen">Open profile ↗</span>
+            </span>
+          </a>
+
+          <a
+            class="social-card reveal"
+            href="https://www.snapchat.com/add/fi1_oo?share_id=ez2rePla17Q&locale=ar-JO"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Open Snapchat profile"
+          >
+            <span class="social-icon" aria-hidden="true">SC</span>
+            <span class="social-copy">
+              <span class="social-name">Snapchat</span>
+              <span class="social-action" data-i18n="socialOpen">Open profile ↗</span>
+            </span>
+          </a>
+
+          <a
+            class="social-card reveal"
+            href="https://t.me/B0SS_S1"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Open Telegram profile"
+          >
+            <span class="social-icon" aria-hidden="true">TG</span>
+            <span class="social-copy">
+              <span class="social-name">Telegram</span>
+              <span class="social-action" data-i18n="socialOpen">Open profile ↗</span>
+            </span>
+          </a>
+
+          <a
+            class="social-card reveal"
+            href="https://www.instagram.com/55.0?cplk=cGNucHY5bzlxYzl0"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Open Instagram profile"
+          >
+            <span class="social-icon" aria-hidden="true">IG</span>
+            <span class="social-copy">
+              <span class="social-name">Instagram</span>
+              <span class="social-action" data-i18n="socialOpen">Open profile ↗</span>
+            </span>
+          </a>
+
+          <a
+            class="social-card reveal"
+            href="https://wa.link/lc6f5w"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Open WhatsApp contact"
+          >
+            <span class="social-icon" aria-hidden="true">WA</span>
+            <span class="social-copy">
+              <span class="social-name">WhatsApp</span>
+              <span class="social-action" data-i18n="socialMessage">Send a message ↗</span>
+            </span>
+          </a>
+
+          <a
+            class="social-card reveal"
+            href="https://x.com/You_sh94"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Open X profile"
+          >
+            <span class="social-icon" aria-hidden="true">X</span>
+            <span class="social-copy">
+              <span class="social-name">X / Twitter</span>
+              <span class="social-action" data-i18n="socialOpen">Open profile ↗</span>
+            </span>
+          </a>
+
+          <a
+            class="social-card reveal"
+            href="https://www.threads.com/@1.0_v_?invite=0"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Open Threads profile"
+          >
+            <span class="social-icon" aria-hidden="true">@</span>
+            <span class="social-copy">
+              <span class="social-name">Threads</span>
+              <span class="social-action" data-i18n="socialOpen">Open profile ↗</span>
+            </span>
+          </a>
+
+          <a
+            class="social-card reveal"
+            href="https://www.linkedin.com/in/yousef-z-445aba414?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Open LinkedIn profile"
+          >
+            <span class="social-icon" aria-hidden="true">in</span>
+            <span class="social-copy">
+              <span class="social-name">LinkedIn</span>
+              <span class="social-action" data-i18n="socialOpen">Open profile ↗</span>
+            </span>
+          </a>
+
+          <a
+            class="social-card reveal"
+            href="https://discord.gg/kgwKFPTmZE"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Open Discord invitation"
+          >
+            <span class="social-icon" aria-hidden="true">DC</span>
+            <span class="social-copy">
+              <span class="social-name">Discord</span>
+              <span class="social-action" data-i18n="socialJoin">Join community ↗</span>
+            </span>
+          </a>
+
+          <a
+            class="social-card reveal"
+            href="https://youtube.com/@shaheenos?si=zhAQOa0MO2K6jKiS"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Open YouTube channel"
+          >
+            <span class="social-icon" aria-hidden="true">YT</span>
+            <span class="social-copy">
+              <span class="social-name">YouTube</span>
+              <span class="social-action" data-i18n="socialWatch">Watch channel ↗</span>
+            </span>
+          </a>
+
+          <a
+            class="social-card reveal"
+            href="https://www.tiktok.com/@zix8ii"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Open TikTok profile"
+          >
+            <span class="social-icon" aria-hidden="true">TT</span>
+            <span class="social-copy">
+              <span class="social-name">TikTok</span>
+              <span class="social-action" data-i18n="socialWatch">Watch profile ↗</span>
+            </span>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================
+         CONTACT
+         ================================================= -->
+
+    <section class="section" id="contact">
+      <div class="container">
+
+        <div class="section-heading reveal">
+
+          <div>
+            <span
+              class="eyebrow"
+              data-i18n="contactEyebrow"
+            >DIRECT COMMUNICATION</span>
+
+            <h2 data-i18n="contactTitle">Let's Connect.</h2>
+          </div>
+
+          <p data-i18n="contactDescription">
+            For questions, project discussions, and professional
+            communication, use one of the channels below.
+          </p>
+
+        </div>
+
+        <div class="contact-grid">
+
+          <article class="card contact-intro reveal">
+
+            <div class="card-index">SHAHEEN / CONTACT</div>
+
+            <h3 data-i18n="contactCardTitle">
+              Ideas begin with a conversation.
+            </h3>
+
+            <p data-i18n="contactCardDescription">
+              Reach out through email or visit the main website
+              to explore the SHAHEEN GROUP digital presence.
+            </p>
+
+            <div style="margin-top: 24px;">
+              <a
+                class="button button-primary"
+                href="/"
+              >
+                <span data-i18n="visitWebsite">Visit Main Website</span>
+                <span class="button-arrow" aria-hidden="true">↗</span>
+              </a>
+            </div>
+
+          </article>
+
+          <div class="card contact-details reveal">
+
+            <a
+              class="contact-row"
+              href="mailto:shaheen.group000@gmail.com"
+            >
+              <span class="contact-symbol" aria-hidden="true">@</span>
+
+              <span class="contact-copy">
+                <span
+                  class="contact-label"
+                  data-i18n="emailLabel1"
+                >Primary email</span>
+
+                <span class="contact-value">
+                  shaheen.group000@gmail.com
+                </span>
+              </span>
+
+              <span class="contact-arrow" aria-hidden="true">↗</span>
+            </a>
+
+            <a
+              class="contact-row"
+              href="mailto:shaheen.group000@yahoo.com"
+            >
+              <span class="contact-symbol" aria-hidden="true">@</span>
+
+              <span class="contact-copy">
+                <span
+                  class="contact-label"
+                  data-i18n="emailLabel2"
+                >Alternative email</span>
+
+                <span class="contact-value">
+                  shaheen.group000@yahoo.com
+                </span>
+              </span>
+
+              <span class="contact-arrow" aria-hidden="true">↗</span>
+            </a>
+
+            <a
+              class="contact-row"
+              href="https://wa.link/lc6f5w"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="contact-symbol" aria-hidden="true">WA</span>
+
+              <span class="contact-copy">
+                <span
+                  class="contact-label"
+                  data-i18n="whatsappLabel"
+                >WhatsApp</span>
+
+                <span
+                  class="contact-value"
+                  data-i18n="whatsappValue"
+                >Open direct contact link</span>
+              </span>
+
+              <span class="contact-arrow" aria-hidden="true">↗</span>
+            </a>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================================================
+       FOOTER
+       =================================================== -->
+
+  <footer class="footer">
+
+    <div class="container footer-main">
+
+      <div>
+        <div class="footer-brand">SHAHEEN GROUP</div>
+
+        <div
+          class="footer-tagline"
+          data-i18n="footerTagline"
+        >
+          Beyond Innovation. Beyond Limits.
+        </div>
+      </div>
+
+      <div
+        class="footer-meta"
+        data-i18n="footerLocation"
+      >
+        Independent digital showcase · Amman, Jordan
+      </div>
+
+    </div>
+
+    <div class="container footer-bottom">
+
+      <span>
+        © <span id="currentYear"></span> SHAHEEN GROUP
+      </span>
+
+      <span data-i18n="footerRights">
+        Designed with purpose. Built for the future.
+      </span>
+
+    </div>
+
+  </footer>
+
+  <!-- ===================================================
+       JAVASCRIPT
+       =================================================== -->
+
+  <script>
+    (() => {
+      "use strict";
+
+      const translations = {
+        en: {
+          brandSubtitle: "BEYOND INNOVATION. BEYOND LIMITS.",
+
+          navAbout: "About",
+          navVision: "Vision",
+          navSocial: "Social",
+          navContact: "Contact",
+
+          status: "INDEPENDENT DIGITAL IDENTITY",
+
+          heroTitle1: "BEYOND",
+          heroTitle2: "INNOVATION.",
+          heroTitle3: "BEYOND LIMITS.",
+
+          heroDescription:
+            "Welcome to SHAHEEN GROUP — a digital identity built around technology, creativity, and ambitious ideas.",
+
+          primaryAction: "Explore Main Website",
+          secondaryAction: "Get in Touch",
+
+          heroFootnote:
+            "Independent showcase · Official links and contact channels",
+
+          profileLabel: "FOUNDER / DIGITAL CREATOR",
+
+          profileRole:
+            "Technology · Development · Innovation",
+
+          location: "Amman, Jordan",
+
+          ticker1: "DIGITAL INNOVATION",
+          ticker2: "INDEPENDENT THINKING",
+          ticker3: "TECHNOLOGY & DEVELOPMENT",
+          ticker4: "BEYOND LIMITS",
+          ticker5: "SHAHEEN GROUP",
+
+          aboutEyebrow: "THE FOUNDATION",
+          aboutTitle: "Built on a Different Mindset.",
+
+          aboutDescription:
+            "A personal digital showcase for ideas, technology, creative work, and future ambitions.",
+
+          aboutCard1Title: "Digital Identity",
+
+          aboutCard1Description:
+            "A unified digital presence that brings the SHAHEEN GROUP identity, communication channels, and creative direction together in one place.",
+
+          aboutCard2Title: "Technology & Development",
+
+          aboutCard2Description:
+            "Exploring software, web experiences, automation, Linux environments, and practical digital tools.",
+
+          aboutCard3Title: "Forward Thinking",
+
+          aboutCard3Description:
+            "Turning ambitious concepts into organized projects through continuous learning, experimentation, and deliberate execution.",
+
+          visionEyebrow: "THE PHILOSOPHY",
+
+          visionTitle:
+            "We don't just build projects — we command the digital future.",
+
+          visionDescription:
+            "Every meaningful project starts with a clear idea. SHAHEEN GROUP represents the pursuit of better digital experiences, thoughtful engineering, and creative freedom. The goal is not simply to follow technology, but to understand it, build with it, and keep moving forward.",
+
+          visionSignature:
+            "BEYOND INNOVATION. BEYOND LIMITS.",
+
+          socialEyebrow: "CONNECT",
+          socialTitle: "Find Me Across the Web.",
+
+          socialDescription:
+            "Choose a platform below to open its associated profile or communication channel.",
+
+          socialOpen: "Open profile ↗",
+          socialMessage: "Send a message ↗",
+          socialJoin: "Join community ↗",
+          socialWatch: "Watch profile ↗",
+
+          contactEyebrow: "DIRECT COMMUNICATION",
+          contactTitle: "Let's Connect.",
+
+          contactDescription:
+            "For questions, project discussions, and professional communication, use one of the channels below.",
+
+          contactCardTitle:
+            "Ideas begin with a conversation.",
+
+          contactCardDescription:
+            "Reach out through email or visit the main website to explore the SHAHEEN GROUP digital presence.",
+
+          visitWebsite: "Visit Main Website",
+
+          emailLabel1: "Primary email",
+          emailLabel2: "Alternative email",
+
+          whatsappLabel: "WhatsApp",
+          whatsappValue: "Open direct contact link",
+
+          footerTagline:
+            "Beyond Innovation. Beyond Limits.",
+
+          footerLocation:
+            "Independent digital showcase · Amman, Jordan",
+
+          footerRights:
+            "Designed with purpose. Built for the future."
+        },
+
+        ar: {
+          brandSubtitle: "ما وراء الابتكار. ما وراء الحدود.",
+
+          navAbout: "من نحن",
+          navVision: "الرؤية",
+          navSocial: "التواصل",
+          navContact: "اتصل بنا",
+
+          status: "هوية رقمية مستقلة",
+
+          heroTitle1: "ما وراء",
+          heroTitle2: "الابتكار.",
+          heroTitle3: "ما وراء الحدود.",
+
+          heroDescription:
+            "مرحبًا بك في SHAHEEN GROUP — هوية رقمية تجمع بين التكنولوجيا والإبداع والطموحات الكبيرة.",
+
+          primaryAction: "استكشف الموقع الرئيسي",
+          secondaryAction: "تواصل معنا",
+
+          heroFootnote:
+            "واجهة تعريفية مستقلة · روابط التواصل والقنوات الرسمية",
+
+          profileLabel: "المؤسس / صانع المحتوى الرقمي",
+
+          profileRole:
+            "التكنولوجيا · التطوير · الابتكار",
+
+          location: "عمّان، الأردن",
+
+          ticker1: "الابتكار الرقمي",
+          ticker2: "التفكير المستقل",
+          ticker3: "التكنولوجيا والتطوير",
+          ticker4: "ما وراء الحدود",
+          ticker5: "SHAHEEN GROUP",
+
+          aboutEyebrow: "الأساس",
+          aboutTitle: "عقلية مختلفة. رؤية أبعد.",
+
+          aboutDescription:
+            "واجهة رقمية تعريفية تجمع الأفكار والتكنولوجيا والأعمال الإبداعية والطموحات المستقبلية.",
+
+          aboutCard1Title: "الهوية الرقمية",
+
+          aboutCard1Description:
+            "حضور رقمي موحّد يجمع هوية SHAHEEN GROUP وقنوات التواصل والتوجّه الإبداعي في مكان واحد.",
+
+          aboutCard2Title: "التكنولوجيا والتطوير",
+
+          aboutCard2Description:
+            "استكشاف البرمجيات وتجارب الويب والأتمتة وبيئات لينكس والأدوات الرقمية العملية.",
+
+          aboutCard3Title: "التفكير نحو المستقبل",
+
+          aboutCard3Description:
+            "تحويل الأفكار الطموحة إلى مشاريع منظمة من خلال التعلم المستمر والتجربة والتنفيذ المدروس.",
+
+          visionEyebrow: "الفلسفة",
+
+          visionTitle:
+            "نحن لا نبني المشاريع فحسب، بل نقود المستقبل الرقمي.",
+
+          visionDescription:
+            "يبدأ كل مشروع ذي قيمة بفكرة واضحة. تمثل SHAHEEN GROUP السعي نحو تجارب رقمية أفضل وهندسة مدروسة وحرية إبداعية. الهدف ليس مجرد متابعة التكنولوجيا، بل فهمها والبناء باستخدامها والاستمرار في التقدم.",
+
+          visionSignature:
+            "ما وراء الابتكار. ما وراء الحدود.",
+
+          socialEyebrow: "تواصل",
+          socialTitle: "تجدني عبر الإنترنت.",
+
+          socialDescription:
+            "اختر إحدى المنصات التالية لفتح الحساب أو قناة التواصل المرتبطة بها.",
+
+          socialOpen: "فتح الحساب ↗",
+          socialMessage: "إرسال رسالة ↗",
+          socialJoin: "الانضمام إلى المجتمع ↗",
+          socialWatch: "عرض الحساب ↗",
+
+          contactEyebrow: "التواصل المباشر",
+          contactTitle: "لنبقَ على تواصل.",
+
+          contactDescription:
+            "للاستفسارات ومناقشة المشاريع والتواصل المهني، يمكنك استخدام إحدى القنوات التالية.",
+
+          contactCardTitle:
+            "الأفكار تبدأ بمحادثة.",
+
+          contactCardDescription:
+            "تواصل عبر البريد الإلكتروني أو زر الموقع الرئيسي لاستكشاف الحضور الرقمي لـ SHAHEEN GROUP.",
+
+          visitWebsite: "زيارة الموقع الرئيسي",
+
+          emailLabel1: "البريد الإلكتروني الأساسي",
+          emailLabel2: "البريد الإلكتروني البديل",
+
+          whatsappLabel: "واتساب",
+          whatsappValue: "فتح رابط التواصل المباشر",
+
+          footerTagline:
+            "ما وراء الابتكار. ما وراء الحدود.",
+
+          footerLocation:
+            "واجهة رقمية مستقلة · عمّان، الأردن",
+
+          footerRights:
+            "تصميم هادف. وبناء للمستقبل."
+        }
+      };
+
+      const root = document.documentElement;
+      const languageToggle = document.getElementById("languageToggle");
+      const languageLabel = document.getElementById("languageLabel");
+      const profileImage = document.getElementById("profileImage");
+      const profileFallback = document.getElementById("profileFallback");
+      const currentYear = document.getElementById("currentYear");
+
+      let currentLanguage = "en";
+
+      /**
+       * Apply the selected language to all translated elements.
+       */
+      function applyLanguage(language) {
+        if (!Object.prototype.hasOwnProperty.call(translations, language)) {
+          return;
+        }
+
+        currentLanguage = language;
+
+        root.lang = language;
+        root.dir = language === "ar" ? "rtl" : "ltr";
+
+        document.title = language === "ar"
+          ? "SHAHEEN GROUP — ما وراء الابتكار. ما وراء الحدود."
+          : "SHAHEEN GROUP — Beyond Innovation. Beyond Limits.";
+
+        document.querySelectorAll("[data-i18n]").forEach((element) => {
+          const key = element.getAttribute("data-i18n");
+          const translatedValue = translations[language][key];
+
+          if (typeof translatedValue === "string") {
+            element.textContent = translatedValue;
+          }
+        });
+
+        languageLabel.textContent = language === "en"
+          ? "العربية"
+          : "English";
+
+        languageToggle.setAttribute(
+          "aria-pressed",
+          language === "ar" ? "true" : "false"
+        );
+
+        languageToggle.setAttribute(
+          "aria-label",
+          language === "en"
+            ? "Switch to Arabic"
+            : "Switch to English"
+        );
+
+        try {
+          localStorage.setItem("shaheen-showcase-language", language);
+        } catch (_error) {
+          // The page continues working if storage is unavailable.
+        }
+      }
+
+      /**
+       * Restore the user's previous language when possible.
+       */
+      function getInitialLanguage() {
+        try {
+          const savedLanguage = localStorage.getItem(
+            "shaheen-showcase-language"
+          );
+
+          if (
+            savedLanguage === "ar" ||
+            savedLanguage === "en"
+          ) {
+            return savedLanguage;
+          }
+        } catch (_error) {
+          // Continue with the default language.
+        }
+
+        return "en";
+      }
+
+      languageToggle.addEventListener("click", () => {
+        applyLanguage(
+          currentLanguage === "en" ? "ar" : "en"
+        );
+      });
+
+      /**
+       * Display a simple fallback if the remote profile image fails.
+       */
+      function showProfileFallback() {
+        profileImage.style.display = "none";
+        profileFallback.style.display = "flex";
+      }
+
+      profileImage.addEventListener("error", showProfileFallback);
+
+      if (
+        profileImage.complete &&
+        profileImage.naturalWidth === 0
+      ) {
+        showProfileFallback();
+      }
+
+      /**
+       * Reveal elements as they enter the viewport.
+       */
+      const revealElements = document.querySelectorAll(".reveal");
+
+      if ("IntersectionObserver" in window) {
+        const observer = new IntersectionObserver(
+          (entries, activeObserver) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("in");
+                activeObserver.unobserve(entry.target);
+              }
+            });
+          },
+          {
+            threshold: 0.12
+          }
+        );
+
+        revealElements.forEach((element) => {
+          observer.observe(element);
+        });
+      } else {
+        revealElements.forEach((element) => {
+          element.classList.add("in");
+        });
+      }
+
+      /**
+       * Respect the visitor's reduced-motion preference.
+       */
+      const reducedMotionQuery = window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+      );
+
+      if (reducedMotionQuery.matches) {
+        revealElements.forEach((element) => {
+          element.classList.add("in");
+        });
+      }
+
+      /**
+       * Keep the footer year current.
+       */
+      currentYear.textContent = String(new Date().getFullYear());
+
+      /**
+       * Initialize the interface.
+       */
+      applyLanguage(getInitialLanguage());
+    })();
+  </script>
+
+</body>
+</html>
