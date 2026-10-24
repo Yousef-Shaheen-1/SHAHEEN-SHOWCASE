@@ -16,6 +16,22 @@
   [![Platform](https://img.shields.io/badge/PLATFORM-GITHUB-ffffff?style=for-the-badge&logo=github&logoColor=ffffff&labelColor=111318)](https://github.com/Yousef-Shaheen-1)
   [![License](https://img.shields.io/badge/LICENSE-NOT%20SPECIFIED-858c97?style=for-the-badge&labelColor=111318)](#license)
 
+  <div align="center">
+
+  ## 🌐 LIVE WEBSITE
+
+  <a href="https://yousef-shaheen-1.github.io/SHAHEEN-SHOWCASE/">
+    <img src="https://img.shields.io/badge/VISIT-LIVE%20WEBSITE-00C853?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Visit Live Website">
+  </a>
+
+  <br/>
+
+  <a href="https://shaheen-bilingual-command-hub.lovable.app/" target="_blank" rel="noopener noreferrer">
+    <img src="https://img.shields.io/badge/OPEN-LOVABLE%20WEBSITE-8B5CF6?style=for-the-badge&logo=lovable&logoColor=white" alt="Open SHAHEEN Lovable Website">
+  </a>
+
+  </div>
+
   <br>
 
   [ **EXPLORE THE PROJECT** ](https://github.com/Yousef-Shaheen-1/SHAHEEN-SHOWCASE) • [ **CONTACT THE DEVELOPER** ](mailto:shaheen.group000@gmail.com) • [ **EXPLORE SHAHEEN GROUP** ](https://github.com/SHAHEEN-GROUP)
